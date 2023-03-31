@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="heading">
+      <h1> <%= indexDay  %> </h1>
+    </div>
+    <div class="box">
+      <ul>
+        <% for (var i = 0; i < itemsArray.length; i++){ %>
+          <li> <%= itemsArray[i]  %> </li>
+        <% } %>
+      </ul>
+
+    </div>
+
+    <div class="form">
+      <form action="/" method="post">
+        <input type="text" name="newItem" placeholder="Enter new item">
+        <button type="submit" name="button">Add item</button>
+      </form>
+    </div>
+
+  </body>
+</html>
